@@ -245,3 +245,44 @@ axes[2].tick_params(axis='x', rotation=45)
 plt.tight_layout()
 plt.show()
 
+# Objective 6: Machine Learning Models
+# Prepare dataset for ML
+ml_df = df[['Internet usage (% of population)', 'Life expectancy at birth (years)', 'Birth rate (per 1,000 people)', 'GDP per capita (USD)']].dropna()
+X = ml_df.drop(columns=['GDP per capita (USD)'])
+y = ml_df['GDP per capita (USD)']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Linear Regression
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+y_pred_lr = lr.predict(X_test)
+
+print("\n--- Linear Regression Results ---")
+print(f"R^2 Score: {r2_score(y_test, y_pred_lr):.4f}")
+print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred_lr):.2f}")
+
+# Random Forest Regressor
+rf = RandomForestRegressor(n_estimators=100, random_state=42)
+rf.fit(X_train, y_train)
+y_pred_rf = rf.predict(X_test)
+
+print("\n--- Random Forest Results ---")
+print(f"R^2 Score: {r2_score(y_test, y_pred_rf):.4f}")
+print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred_rf):.2f}")
+
+# Feature importance
+importances = pd.Series(rf.feature_importances_, index=X.columns)
+importances.sort_values().plot(kind='barh', title='Feature Importances - Random Forest')
+plt.tight_layout()
+plt.show()
+
+# Show linear regression predictions at the end
+plt.figure(figsize=(8, 5))
+plt.scatter(y_test, y_pred_lr, alpha=0.6)
+plt.xlabel("Actual GDP per Capita")
+plt.ylabel("Predicted GDP per Capita")
+plt.title("Linear Regression: Actual vs Predicted GDP per Capita")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
