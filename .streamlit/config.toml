@@ -1,0 +1,15 @@
+[theme]
+# A professional blue for interactive elements
+primaryColor = "#00BFFF"
+
+# A deep charcoal for the main background
+backgroundColor = "#0E1117"
+
+# A slightly lighter charcoal for cards and containers
+secondaryBackgroundColor = "#161B22"
+
+# White text for high contrast and readability
+textColor = "#FFFFFF"
+
+# Use a clean, modern sans-serif font
+font = "sans serif"
