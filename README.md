@@ -2,6 +2,8 @@
 
 [![Stars](https://img.shields.io/github/stars/Aar2284/World_Bank_Socio_Economic_Data_Analysis)](https://github.com/Aar2284/World_Bank_Socio_Economic_Data_Analysis/stargazers)
 [![Forks](https://img.shields.io/github/forks/Aar2284/World_Bank_Socio_Economic_Data_Analysis)](https://github.com/Aar2284/World_Bank_Socio_Economic_Data_Analysis/network/members)
+[![Scikit-learn Badge](https://img.shields.io/badge/ML-Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org/)
+[![Python Badge](https://img.shields.io/badge/Language-Python%203.9-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/release/python-390/)
 
 This project analyzes and models global socio-economic indicators using World Bank data, aiming to understand patterns, disparities, and to predict economic outcomes with machine learning techniques. Recent updates include configuration for deploying interactive dashboards with Streamlit.
 ---
@@ -131,3 +133,8 @@ The Streamlit dashboard can be customized by modifying the `config.toml` file lo
 
 **Presentation Tip:**  
 Present visuals objective by objective. Explain model logic and accuracy (R², MSE). Highlight insights such as how internet usage and life expectancy affect GDP per capita.
+
+---
+
+GitHub :- https://github.com/Aar2284
+LinkedIn :- https://www.linkedin.com/in/aaryan-kalia/
