@@ -251,7 +251,7 @@ plt.show()
 
 # Objective 6: Machine Learning Models
 # Prepare dataset for ML
-ml_df = df[['Internet usage (% of population)', 'Life expectancy at birth (years)', 'Birth rate (per 1,000 people)', 'GDP per capita (USD)']].dropna()
+ml_df = df[['Individuals using the Internet (% of population)', 'Life expectancy at birth (years)', 'Birth rate, crude (per 1,000 people)', 'GDP per capita (USD)']].dropna()
 X = ml_df.drop(columns=['GDP per capita (USD)'])
 y = ml_df['GDP per capita (USD)']
 
