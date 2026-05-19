@@ -1,1 +1,9 @@
-streamlitpandasplotlyscikit-learnopenpyxlstatsmodels
+streamlit
+pandas
+numpy
+plotly
+scikit-learn
+openpyxl
+statsmodels
+matplotlib
+seaborn
