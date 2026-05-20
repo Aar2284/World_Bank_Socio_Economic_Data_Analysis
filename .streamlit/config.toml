@@ -1,15 +1,17 @@
+# .streamlit/config.toml
+
 [theme]
-# A professional blue for interactive elements
-primaryColor = "#00BFFF"
+# A vibrant blue for buttons and interactive elements, matching the metric values
+primaryColor = "#4CB9E7"
 
-# A deep charcoal for the main background
-backgroundColor = "#0E1117"
+# The deep, dark background from the main app style
+backgroundColor = "#0F1116"
 
-# A slightly lighter charcoal for cards and containers
+# The slightly lighter charcoal used for cards and containers
 secondaryBackgroundColor = "#161B22"
 
-# White text for high contrast and readability
+# White for maximum readability and contrast
 textColor = "#FFFFFF"
 
-# Use a clean, modern sans-serif font
+# The base font family (the specific 'Roboto' font is loaded via CSS )
 font = "sans serif"
