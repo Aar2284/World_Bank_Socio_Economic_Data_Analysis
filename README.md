@@ -14,7 +14,7 @@ This project analyzes and models global socio-economic indicators using World Ba
 - Indicators: GDP, GDP per capita, life expectancy, internet usage, birth/death rates, regions, and income groups.
 - **Files**:
   - `WorldBank.xlsx`: Original dataset.
-  - `WorldBank_Cleaned.csv`: Cleaned dataset after preprocessing.
+  - `WorldBank_Cleaned.csv`: Generated automatically when you run `graphs.py` (not committed to the repo).
 
 ---
 
@@ -48,15 +48,15 @@ This project analyzes and models global socio-economic indicators using World Ba
 
 ## 🤖 Machine Learning Models
 
-- **Linear Regression**: Predicts GDP per capita using internet usage, life expectancy, birth rate. (R² ≈ 0.38)
-- **Random Forest Regressor**: Improved accuracy, feature importance visualization.
+- **Linear Regression**: Predicts GDP per capita using internet usage, life expectancy, birth rate. (R² = 0.3801)
+- **Random Forest Regressor**: Improved accuracy (R² = 0.7513), feature importance visualization.
 
 ---
 
 ## 🛠 Technologies & Configuration
 
 - Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)
-- Jupyter Notebook / VS Code
+- VS Code
 - Excel / CSV for data storage
 - **Streamlit**: Interactive dashboard configuration initialized and themed.
 
@@ -66,10 +66,13 @@ The `requirements.txt` file includes:
 
 *   `streamlit`: For creating interactive web applications.
 *   `pandas`: For data manipulation and analysis.
+*   `numpy`: For numerical computing.
 *   `plotly`: For creating interactive plots and visualizations.
 *   `scikit-learn`: For machine learning algorithms and tools.
 *   `openpyxl`: For reading and writing Excel files.
 *   `statsmodels`: For statistical modeling.
+*   `matplotlib`: For static visualizations.
+*   `seaborn`: For statistical data visualization.
 
 ---
 
@@ -77,12 +80,12 @@ The `requirements.txt` file includes:
 
 1. Install dependencies:
    ```bash
-   pip install pandas matplotlib seaborn scikit-learn openpyxl streamlit
+   pip install -r requirements.txt
    ```
 2. Place `WorldBank.xlsx` in your working directory.
-3. Run the analysis script or notebook:
+3. Run the analysis script (it also generates `WorldBank_Cleaned.csv`):
    ```bash
-   python world_bank_analysis.py
+   python graphs.py
    ```
 4. To launch the dashboard:
    ```bash
@@ -96,11 +99,13 @@ The `requirements.txt` file includes:
 ```
 World_Bank_Socio_Economic_Data_Analysis/
 ├── .streamlit/
-│   └── config.toml       # Streamlit configuration file
+│   └── config.toml        # Streamlit configuration file
+├── .gitignore             # Files excluded from version control
 ├── README.md              # This file
 ├── WorldBank.xlsx         # Dataset (World Bank data)
 ├── dashboard.py           # Streamlit dashboard application
 ├── graphs.py              # Script for generating graphs and performing analysis
+├── project.py             # Earlier version of the analysis script
 └── requirements.txt       # List of Python dependencies
 ```
 
